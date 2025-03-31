@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>온앤온 때리기</title>
+    <style>
+        .img
+        {
+            display: flex;
+            justify-content: center;  /* 가로 가운데 */
+            align-items: center;      /* 세로 가운데 */
+            height: 300px;            /* 예시용 높이 */
+        }
+
+        .bttn
+        {
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="img">
+        <img id="on_and_on" src="온하.png" alt="이미지 없음">
+    </div>
+    <div class="bttn">
+        <button id="press-btn">때리기!</button>
+    </div>
+    
+    <script>
+        const btn = document.getElementById('press-btn');
+        const image = document.getElementById('on_and_on');
+
+        btn.addEventListener('mousedown', () => {image.src = "깡.png"});
+        btn.addEventListener('mouseup', () => {image.src = "온하.png"});
+        
+        btn.addEventListener('touchstart', () => {image.src = "깡.png"});
+        btn.addEventListener('touchend', () => {image.src = "온하.png"});
+
+
+    </script>
+</body>
+</html>
